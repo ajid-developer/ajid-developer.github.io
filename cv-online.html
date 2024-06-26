@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Curriculum Vitae</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+          integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <style>
+        /*start reset CSS*/
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        /*
+          2. Remove default margin
+        */
+        * {
+            margin: 0;
+        }
+
+        /*
+          Typographic tweaks!
+          3. Add accessible line-height
+          4. Improve text rendering
+        */
+        body {
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /*
+          5. Improve media defaults
+        */
+        img, picture, video, canvas, svg {
+            display: block;
+            max-width: 100%;
+        }
+
+        /*
+          6. Remove built-in form typography styles
+        */
+        input, button, textarea, select {
+            font: inherit;
+        }
+
+        /*
+          7. Avoid text overflows
+        */
+        p, h1, h2, h3, h4, h5, h6 {
+            overflow-wrap: break-word;
+        }
+
+        /*
+          8. Create a root stacking context
+        */
+        #root, #__next {
+            isolation: isolate;
+        }
+
+        /*end reset CSS*/
+
+        body {
+            background-color: #efefef;
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            padding: 0 5rem;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: auto 40%;
+            padding: 0 15rem;
+        }
+
+        .sertificate {
+            padding: 0 15rem;
+        }
+
+        .sertificate .title {
+            padding: 2rem;
+            background-color: white;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 5px;
+            background-color: white;
+        }
+
+        .gallery img {
+            border: 1px solid black;
+        }
+
+        .content-left {
+            background-color: white;
+            color: black;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            min-height: 900px;
+
+        }
+
+        .content-left .name {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .content-left .job {
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        .title {
+            font-size: 1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .content-left .company-name {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .content-right {
+            background-color: #323B4C;
+            color: white;
+            min-height: 900px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+
+        .contact .contact-data {
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+        }
+
+        table tr td:first-child {
+            background-color: rgba(241, 38, 38, 0.2);
+            padding: 4px;
+            border-radius: 4px;
+            color: white;
+        }
+
+        table tr td:last-child {
+            background-color: rgba(112, 250, 81, 0.31);
+            padding: 4px;
+            border-radius: 4px;
+        }
+
+        .education .content .title {
+            font-weight: 400;
+            font-size: 14px;
+            margin-top: 1rem;
+        }
+
+        .education .content .year {
+            font-weight: 200;
+            font-size: 14px;
+        }
+
+        /* Aturan CSS untuk layar menengah (tablet) */
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+            .container {
+                grid-template-columns: 100%;
+            }
+
+            .gallery {
+                grid-template-columns: repeat(1, 1fr);
+                grid-gap: 3px;
+            }
+        }
+
+        /* Aturan CSS untuk layar kecil (ponsel) */
+        @media screen and (max-width: 767px) {
+            .container {
+                grid-template-columns: 100%;
+            }
+
+            .gallery {
+                grid-template-columns: repeat(1, 1fr);
+                grid-gap: 3px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="content-left">
+        <div class="bio">
+            <div class="name">Achmad Muhajid SA</div>
+            <div class="job">Junior Backend Developer</div>
+            <div class="city">Yogyakarta, Indonesia</div>
+        </div>
+        <div class="profile">
+            <div class="title">tentang saya</div>
+            <div class="content">
+                Perkenalkan, Saya Achmad Muhajid SA lulusan <span>Sistem Informasi</span> Diploma 3 di Universitas
+                Jenderal Achmad Yani Yogyakarta tahun 2021.
+                <br>
+                Memiliki pengalaman sebagai Backend Developer dan pernah membangun aplikasi mengunakan PHP Native dan
+                Laravel Framework
+            </div>
+        </div>
+        <div class="experience">
+            <div class="title">Pengalaman Kerja</div>
+            <div class="list-experience">
+                <div class="company-name">Magang PT. Technophoria Indonesia Yogyakarta</div>
+                <div class="date">Juni 2020 - Agustus 2020</div>
+                <div class="task">
+                    <ul>
+                        <li>Saya dan tim membangun aplikasi pendataan siswa di kabupaten bima nusa tenggara barat
+                            berbasis website.
+                            Saya bertugas mengintegrasi data dari database ke tampilan
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="list-experience">
+                <div class="company-name">PT. Inovasi Bakti Nusantara Yogyakarta</div>
+                <div class="date">November 2021 - Sekarang</div>
+                <div class="task">
+                    <ul>
+                        <li>Membangun aplikasi perhitungan skor permainan golf. Saya bertugas pada sisi Backend dengan
+                            mengunakan Framework Springboot
+                        </li>
+                        <li>Melakukan integrasi API untuk pembelian diamond game mengunkan Laravel Framework
+                        </li>
+                        <li>Bekerja sama dengan Tim membangun aplikasi pencucian mobil panggilan. Saya bertugas pada
+                            sisi Backend membangun API menggunakan Framework Laravel untuk Mobile dan Web Frontend
+                        </li>
+                        <li>Membangun aplikasi berbasis web untuk mengambungkan 2 database pada salah satu PT di
+                            karawang
+                        </li>
+                        <li>Bekerjasama dengan Tim membangun aplikasi pemesanan makanan, minuman dan lapangan pada
+                            lapangan golf di Jababeka Golf. Saya bertugas pada sisi Backend membangun API menggunakan
+                            Framework Laravel untuk Mobile dan Web Frontend
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content-right">
+        <div class="contact">
+            <div class="title">Kontak</div>
+            <div class="content">
+                <div class="contact-data">
+                    <div class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+                    <div class="text">muhajidachmad@gmail.com</div>
+                </div>
+                <div class="contact-data">
+                    <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                    <div class="text">082 146 676 019</div>
+                </div>
+                <div class="contact-data">
+                    <div class="icon"><i class="fa fa-link" aria-hidden="true"></i></div>
+                    <div class="text">www.linkedin.com/in/achmad-muhajid</div>
+                </div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="title">Kemampuan</div>
+            <div class="content">
+                <table>
+                    <tr>
+                        <td>PHP</td>
+                        <td>Menengah</td>
+                    </tr>
+                    <tr>
+                        <td>Laravel Framework</td>
+                        <td>Menengah</td>
+                    </tr>
+                    <tr>
+                        <td>Java</td>
+                        <td>Menengah</td>
+                    </tr>
+                    <tr>
+                        <td>Springboot Framework</td>
+                        <td>Pemula</td>
+                    </tr>
+                    <tr>
+                        <td>PostgreSQL</td>
+                        <td>Menengah</td>
+                    </tr>
+                    <tr>
+                        <td>MySQL</td>
+                        <td>Menengah</td>
+                    </tr>
+                    <tr>
+                        <td>Git</td>
+                        <td>Menengah</td>
+                    </tr>
+                    <tr>
+                        <td>Gitlab</td>
+                        <td>Menengah</td>
+                    </tr>
+                    <tr>
+                        <td>CI CD Gitlab</td>
+                        <td>Pemula</td>
+                    </tr>
+                    <tr>
+                        <td>Replication PostgreSQL</td>
+                        <td>Pemula</td>
+                    </tr>
+                    <tr>
+                        <td>Docker</td>
+                        <td>Pemula</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="education">
+            <div class="title">Pendidikan</div>
+            <div class="content">
+                <div class="title">Universitas Jenderal Achmad Yani Yogyakarta</div>
+                <div class="year">Diploma 3 Sistem Informasi 2018-2021</div>
+            </div>
+            <div class="content">
+                <div class="title">SMK Negeri 1 Kalabahi</div>
+                <div class="year">Akuntansi 2011-2014</div>
+            </div>
+        </div>
+        <div class="language">
+            <div class="title">Bahasa</div>
+            <div class="content">
+                <div class="text">Indonesia</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="sertificate">
+    <div class="title">Sertifikat</div>
+    <div class="gallery">
+        <div>
+            <img src="sertifikat/cmd.jpg" alt="java">
+        </div>
+        <div>
+            <img src="sertifikat/sql.jpg" alt="java">
+        </div>
+        <div>
+            <img src="sertifikat/jss.jpg" alt="java">
+        </div>
+        <div>
+            <img src="sertifikat/java.jpg" alt="java">
+        </div>
+        <div>
+            <img src="sertifikat/php.jpg" alt="java">
+        </div>
+        <div>
+            <img src="sertifikat/dicoding1.jpg" alt="java">
+        </div>
+        <div>
+            <img src="sertifikat/dicoding2.jpg" alt="java">
+        </div>
+        <div>
+            <img src="sertifikat/dicoding3.jpg" alt="java">
+        </div>
+    </div>
+</div>
+</body>
+</html>
